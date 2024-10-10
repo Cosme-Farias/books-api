@@ -7,10 +7,21 @@ const UserSchema = new Schema<User>({
 		required: true,
 		unique: true
 	},
+	firstName: {
+		type: String,
+
+	},
+	lastName: {
+		type: String
+	},
 	password: {
 		type: String,
-		required: true
+		required: false
 	},
+	lastLogin: {
+		type: Date,
+		required: false
+	}
 
 },
 	{

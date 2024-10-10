@@ -9,7 +9,7 @@ const encrypt = async (password: string) => {
 	return await hash(password,SALT)
 }
 
-const verified = async (pass: string,hashPass: string) => {
+const verifiedPassword = async (pass: string,hashPass: string) => {
 	return await compare(pass,hashPass)
 }
 
@@ -20,5 +20,5 @@ const generateToken = (_id: string) => {
 
 const verifyToken = async () => { }
 
-export { encrypt,verified,generateToken }
+export { encrypt,verifiedPassword,generateToken }
 
