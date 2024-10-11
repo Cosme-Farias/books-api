@@ -2,7 +2,7 @@ export enum UserTypes {
 	ADMIN = "Admin",
 	PANEL = "Panel"
 }
-type Role = UserTypes
+export type Role = UserTypes
 
 export interface User {
 	email: string
