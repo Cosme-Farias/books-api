@@ -42,7 +42,7 @@ const updateBook = async (req: Request,res: Response) => {
 	const { id } = req.params
 	if (!mongoose.Types.ObjectId.isValid(id)) throw new Error("Invalid id")
 
-	const book = await BookModel.findByIdAndUpdate(id,req.body)
+	const book = await BookModel.findByIdAndUpdate(id,req.body,{ new: true })
 
 	if (!book) throw new Error("Book not found")
 
